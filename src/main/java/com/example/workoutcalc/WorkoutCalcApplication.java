@@ -14,11 +14,11 @@ import java.sql.SQLException;
 public class WorkoutCalcApplication {
     public static void main(String[] args) throws SQLException {
 
-//        Connection con = DBUtil.getConnection();
-//
-//        if (con != null) {
-//            System.out.println("Database connected");
-//        }
+        Connection con = DBUtil.getConnection();
+
+        if (con != null) {
+            System.out.println("Database connected");
+        }
 
         SpringApplication.run(WorkoutCalcApplication.class, args);
     }

@@ -6,23 +6,18 @@ import javax.annotation.processing.Generated;
 import java.util.List;
 
 @Entity
-
 public class UserWorkout {
 @Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)
 private int id;
 
-    public int calnumb = 0 ;
-    public String workoutSplit = "";
+    private int calnumb;
+    private String workoutSplit;
 
-    public int WorkoutDuration = 0;
+    private int WorkoutDuration;
 
-    public String PostMeal;
+    private String PostMeal;
 
-
-
-    public int workoutStreak;
-    public List<UserWorkout> getAll(){return null;}
     public int getId() {
         return id;
     }
@@ -71,6 +66,6 @@ private int id;
         this.workoutStreak = workoutStreak;
     }
 
-    public UserWorkout() {
-    }
+    private int workoutStreak;
+
 }

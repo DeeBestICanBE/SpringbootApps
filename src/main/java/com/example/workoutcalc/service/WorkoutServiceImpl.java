@@ -27,7 +27,10 @@ public class WorkoutServiceImpl implements Workoutservice {
         List<UserWorkout> todayworkout = workoutRepository.findAll();
      return todayworkout.stream().map((tw1) -> maptoWorkDto(tw1)).collect(Collectors.toList());
     }
+
+
     private UserWorkoutdto maptoWorkDto(UserWorkout userWorkout) {
+    // convert to dto for secure data
         UserWorkoutdto userWorkoutdto = UserWorkoutdto.builder()
                 .id(userWorkout.getId())
                 .calnumb(userWorkout.getCalnumb())
@@ -35,13 +38,14 @@ public class WorkoutServiceImpl implements Workoutservice {
                 .workoutSplit(userWorkout.getWorkoutSplit())
                 .workoutStreak(userWorkout.getWorkoutStreak())
                 .build();
+
         return userWorkoutdto;
     }
 
 
     @Override
     public String add(UserWorkout userWorkout) {
-        return null;
+      return null;
     }
 
     @Override
