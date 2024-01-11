@@ -15,7 +15,7 @@ function App() {
       </header>
       <div className='Login'>
         <div>
-          <text></text>
+          <text>Workout App</text>
       <WorkoutPlan/>
         </div>
         </div>
