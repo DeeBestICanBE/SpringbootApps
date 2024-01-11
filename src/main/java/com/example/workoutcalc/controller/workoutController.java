@@ -19,7 +19,6 @@ import java.util.List;
 @CrossOrigin
 public class workoutController {
 
-
 private Workoutservice workoutservice;
 
 private SessionRepository sessionRepository;
@@ -33,10 +32,6 @@ private SessService sessService;
 
     }
 
-//    public workoutController(SessService sessService) {
-//        this.sessService = sessService;
-//    }
-
     @GetMapping("/sessions")
     public List<Wsession> listSessions(Wsession wsession) {
    List<Wsession> prevSes = sessService.PrevSession();
@@ -49,7 +44,6 @@ private SessService sessService;
     public String add(UserWorkout userWorkout ) {
         //create array for calorie output for daily workouts this is for adding
         List<UserWorkout> newentry = workoutservice.getAll();
-
         return workoutservice.saveWorkout().toString();
     }
 

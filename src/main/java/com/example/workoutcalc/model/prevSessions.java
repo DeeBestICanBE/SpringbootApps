@@ -9,5 +9,5 @@ public class prevSessions {
     @Id
     @GeneratedValue
     private int id;
-
+    private String name;
 }
